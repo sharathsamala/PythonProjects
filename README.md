@@ -1,30 +1,24 @@
 # PythonProjects
 All my python projects 
 
+Module Information:
 
-Requirements :
-
-| Module | External dependencies |
-| --- | --- |
-| MsSqldbUtility.py | Needs odbc driver to work with pyodbc |
-
-
-
+| Module | Info | external dependencies |
+| --- | --- | --- |
+| MsSqldbUtility.py | wrapper to connect to azure sql db or mssql server | require odbc drivers to be installed |
+| SqoopUtility.py | wrapper to sqoop data from rdbms to hive | |
 
 
 Misic info:
 
-For MAC : 
+    For MAC : 
+    
+        brew unlink freetds
+        
+        brew install freetds@0.91 
+        
+        brew link --force freetds@0.91
+        
+        brew install unixodbc
 
-brew unlink freetds
-brew install freetds@0.91
-brew link --force freetds@0.91
-brew install unixodbc
 
-
-Module Information:
-
-| Module | Info |
-| --- | --- |
-| MsSqldbUtility.py | wrapper to connect to azure sql db or mssql server |
-| SqoopUtility.py | wrapper to sqoop data from rdbms to hive |
