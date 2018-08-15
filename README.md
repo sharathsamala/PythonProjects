@@ -27,5 +27,4 @@ Module Information:
 | Module | Info |
 | --- | --- |
 | MsSqldbUtility.py | wrapper to connect to azure sql db or mssql server |
-| --- | --- |
 | SqoopUtility.py | wrapper to sqoop data from rdbms to hive |
