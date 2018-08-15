@@ -1,4 +1,5 @@
 import pyodbc
+import pymssql
 import traceback
 import pandas
 
@@ -41,7 +42,7 @@ class MsSqldbUtility(object):
             return conn_result
 
 
-    def execute_query(self,query,conn_obj):
+    def execute_query(self, query, conn_obj):
         dict_result = {}
         fetched_data = {}
         try :
@@ -117,7 +118,7 @@ class MsSqldbUtility(object):
             conn_result = {CONSTANTS.STATUS_KEY: CONSTANTS.STATUS_FAILED, CONSTANTS.ERROR_KEY: str(e)}
             return conn_result
 
-    def create_mssql_conn(self,connection_details):
+    def create_mssql_conn(self, connection_details):
         status_message = ""
         try :
             status_message="creating ms-sql connection"
