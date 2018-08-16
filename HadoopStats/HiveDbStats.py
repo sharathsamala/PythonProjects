@@ -21,8 +21,8 @@ import pathos.pools as Pool
 
 from Utils.Logsetup import logger
 
-
 PARALLEL_POOL_SIZE = 10
+
 
 class HiveDbStats(object):
 
