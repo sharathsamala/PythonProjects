@@ -21,7 +21,6 @@ import pathos.pools as Pool
 
 from Utils.Logsetup import logger
 
-#sys.path.append("/opt/cloudera/parcels/SPARK2-2.1.0.cloudera1-1.cdh5.7.0.p2387.140446/lib/spark2/python/")
 
 PARALLEL_POOL_SIZE = 10
 
