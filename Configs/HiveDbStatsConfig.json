@@ -1,0 +1,17 @@
+{
+  "common_config": {
+    "database_name": "hive_db1",
+    "hdfs_base_path": "hdfs://cluster-name-1/dir1/dirb/dirc/dbname/",
+    "refresh_delta": "1",
+    "partition": "dt"
+  },
+  "table_list": [
+    {
+      "table_name": "kh_raw_projects"
+    },
+    {
+      "table_name": "kh_parent_child_repo_info",
+      "partition": "region"
+    }
+  ]
+}
