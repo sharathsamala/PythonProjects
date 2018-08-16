@@ -221,7 +221,7 @@ class HiveDbStats(object):
             logger.info("Fetching the record count ...")
             table_list = self.input_conf_dict["table_list"]
 
-            final_query = ''' hive -S -e " add jar /opt/cloudera/parcels/CDH-5.7.1-1.cdh5.7.1.p2437.2649/jars/hive-hcatalog-core-1.1.0-cdh5.7.1.jar; set hive.exec.parallel=true; set hive.exec.parallel.thread.number=20 ; set mapred.job.queue.name=root.kh_analytics_buildbot; '''
+            final_query = ''' hive -S -e " set hive.exec.parallel=true; set hive.exec.parallel.thread.number=20 ; '''
             for table_vals in table_list:
                 table_query = {}
                 table_query["table_name"] = table_vals["table_name"]
