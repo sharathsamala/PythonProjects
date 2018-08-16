@@ -93,6 +93,7 @@ class HiveDbStats(object):
         output format : {"table_name"}
         :return:
         """
+
         hdfs_data_buffer = []
         try:
             table_list = self.input_conf_dict["table_list"]
