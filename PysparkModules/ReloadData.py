@@ -30,7 +30,6 @@ class ReloadData(object):
                 .config("hive.exec.dynamic.partition", "true") \
                 .config("hive.exec.dynamic.partition.mode", "nonstrict") \
                 .config("hive.exec.stagingdir", "/tmp/spark-hive-staging/") \
-                .config("spark.yarn.queue", "root.kh_analytics_buildbot") \
                 .enableHiveSupport()\
                 .getOrCreate()
 
