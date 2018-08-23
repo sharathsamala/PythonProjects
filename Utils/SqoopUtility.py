@@ -400,7 +400,7 @@ if __name__ == '__main__':
     try:
         opts, args = getopt.getopt(
             sys.argv[1:], "c:s:t:p:h",
-            ["ingestion_config_path=", "source_name=","table_name", "thread_pool_size", "help"])
+            ["ingestion_config_path=", "source_name=", "table_name", "thread_pool_size", "help"])
     except Exception as e:
         sys.stderr.write("\nERROR: " + str(e))
         usage(1)
