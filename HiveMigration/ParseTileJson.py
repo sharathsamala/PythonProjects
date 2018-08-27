@@ -78,7 +78,6 @@ class ParseTileJson(object):
             sys.stderr(traceback.format_exc())
             sys.exit(1)
 
-
 def main():
 
     while True:
