@@ -7,10 +7,10 @@
   },
   "table_list": [
     {
-      "table_name": "kh_raw_projects"
+      "table_name": "table_1"
     },
     {
-      "table_name": "kh_parent_child_repo_info",
+      "table_name": "table_2",
       "partition": "region"
     }
   ]
