@@ -9,7 +9,7 @@ import logging.handlers
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import udf
 
-HIVE_QUERY = """select i.workflow	, i.project_id	, i.project_name	, i.project_type	, i.project_state	, i.parent	, i.parent_name	, i.wave_type	, i.current_project_status	, i.geo_info_id	, i.fips	, i.tiger_km	, i.parent_project_status	, i.tags	, i.subtype	, i.resolution	, i.revision_alias	, i.parent_project_type	, i.todo_version	, i.root_project_id	, i.build_region_id	, i.build_region_name	, i.area_id	, i.area_name	, i.project_type_id	, i.run_count	, i.dt	, LOWER(get_json_object(r.line, '$.properties.activity.market.name')) as market, i.project_id_partition from kh_analytics.kh_project_info i join kh_analytics.kh_raw_projects r on get_json_object(r.line, '$.project_id') = i.project_id and r.project_id_partition = i.project_id_partition and r.dt = i.dt where r.dt like '%{0}%'"""
+HIVE_QUERY = ""
 
 
 class ReloadData(object):
