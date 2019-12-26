@@ -10,7 +10,7 @@ Module Information:
 | HiveDbStats.py | Wrapper to fetch hdfs size and record count of hive tables | |
 
 
-Misic info:
+Misc info:
 
     For MAC : 
     
