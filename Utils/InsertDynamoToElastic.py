@@ -10,9 +10,7 @@ def from_dynamodb_to_json(item):
     return {k: d.deserialize(value=v) for k, v in item.items()}
 
 def lambda_handler(event, context):
-    # TODO implement
     print(event)
-    
     output = {}
     for x in event["Records"]:
         event_type = x['eventName']
