@@ -3,6 +3,7 @@
 # dynamic programming with cache
 def dp_min_coins(target, coins, cache):
 
+    print("getting min val for ", target)
     # base case
     min_coins = target
     if target in coins:
@@ -24,9 +25,9 @@ def dp_min_coins(target, coins, cache):
     return min_coins
 
 
-target = 74
+target = 75
 coins = (1,5,10,25)
 cache = [0]*(target+1)
 
-print(dp_min_coins(target,coins,cache))
+print(dp_min_coins(target, coins, cache))
 
