@@ -1,0 +1,78 @@
+{
+  "source_list": {
+    "db1": {
+      "source_config": {
+        "name": "db1",
+        "db_type": "postgresql",
+        "hostname": "abc.com:5303",
+        "database": "db1_d",
+        "username": "db1_u",
+        "password": "xxxxxxxxxx",
+        "mapper_count": "1",
+        "hive_db_name": "hive_db1_d",
+        "hdfs_base_path": "/data/migration/",
+        "optional_params": "-Dorg.apache.sqoop.splitter.allow_text_splitter=true -Dmapreduce.job.user.classpath.first=true"
+      },
+      "tables": {
+        "tbl3_incremental": {
+          "query": "select uv.id as user_id, uv.manager_id, uv.old_manager_name, uv.vendor_id, l.sid as location_name from users uv left join locations l on uv.location_id = l.id left join vendors v on uv.vendor_id = v.id",
+          "load_type": "incremental",
+          "hive_table_name": "hive_users"
+        },
+        "tbl1": {
+          "query": "select * from public.tb1",
+          "hive_table_name": "hive_tb1",
+          "map_columns_java": "col1=String,col2=String,col3=String,col4=String,col5=String",
+          "map_columns_hive": "col1=STRING,col2=STRING,col3=STRING,col4=STRING,col5=STRING",
+          "split_by": "id",
+          "mapper_count": "2"
+        },
+        "tbl2": {
+          "query": "select * from public.tb2",
+          "hive_table_name": "hive_tb1",
+          "map_columns_java": "col1=String,col2=String,col3=String,col4=String,col5=String",
+          "map_columns_hive": "col1=STRING,col2=STRING,col3=STRING,col4=STRING,col5=STRING",
+          "split_by": "id",
+          "mapper_count": "2"
+        }
+      }
+    },
+    "db2": {
+      "source_config": {
+        "name": "db2",
+        "db_type": "postgresql",
+        "hostname": "abc.com:5303",
+        "database": "db2_d",
+        "username": "db2_u",
+        "password": "xxxxxxxxxx",
+        "mapper_count": "1",
+        "hive_db_name": "hive_db2_d",
+        "hdfs_base_path": "/data/migration/",
+        "optional_params": "-Dorg.apache.sqoop.splitter.allow_text_splitter=true -Dmapreduce.job.user.classpath.first=true"
+      },
+      "tables": {
+        "tbl3_incremental": {
+          "query": "select uv.id as user_id, uv.manager_id, uv.old_manager_name, uv.vendor_id, l.sid as location_name from users uv left join locations l on uv.location_id = l.id left join vendors v on uv.vendor_id = v.id",
+          "load_type": "incremental",
+          "hive_table_name": "hive_users"
+        },
+        "tbl1": {
+          "query": "select * from public.tb1",
+          "hive_table_name": "hive_tb1",
+          "map_columns_java": "col1=String,col2=String,col3=String,col4=String,col5=String",
+          "map_columns_hive": "col1=STRING,col2=STRING,col3=STRING,col4=STRING,col5=STRING",
+          "split_by": "id",
+          "mapper_count": "2"
+        },
+        "tbl2": {
+          "query": "select * from public.tb2",
+          "hive_table_name": "hive_tb1",
+          "map_columns_java": "col1=String,col2=String,col3=String,col4=String,col5=String",
+          "map_columns_hive": "col1=STRING,col2=STRING,col3=STRING,col4=STRING,col5=STRING",
+          "split_by": "id",
+          "mapper_count": "2"
+        }
+      }
+    }
+  }
+}
